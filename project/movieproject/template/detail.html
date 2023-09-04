@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block body %}
+
+        <div class="container" style="padding-top: 120px;">
+            <div class="row">
+                <div class="col-md-6">
+                    <img src="{{a.image.url}}" height="300" width="300">
+                </div>
+            
+                <div class="col-md-6">
+                <h2>{{a.title}}</h2>
+                <h5>{{a.discription}}</h5>
+                <h4>{{a.year}}</h4>
+                
+                <a href="{% url 'update' a.id %}" class="btn btn-primary">Update</a>
+                <a href="{% url 'delete' a.id %}" class="btn btn-primary">delete</a>
+                </div>
+            </div>
+        </div>
+{% endblock %}
